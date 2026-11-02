@@ -14,7 +14,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ivlev-dev/silentwire.git"  },
+    "url": "git+https://github.com/ivlev-dev/silentwire.git"
+  },
   "homepage": "https://github.com/ivlev-dev/silentwire",
   "bugs": {
     "url": "https://github.com/ivlev-dev/silentwire/issues"
@@ -47,7 +48,8 @@
   },
   "scripts": {
     "prepublishOnly": "npm run typecheck && npm test && npm run build",
-    "build": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true});\" && tsc -p tsconfig.json",    "test": "vitest run",
+    "build": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true});\" && tsc -p tsconfig.json",
+    "test": "vitest run",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "test:watch": "vitest",
     "bench": "vitest bench",
