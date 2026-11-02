@@ -38,7 +38,7 @@ export function asyncDiPlugin(options: AsyncDiPluginOptions = {}): Plugin {
   };
 
   return {
-    name: "async-di",
+    name: "silentwire",
     enforce: "pre",
     buildStart() {
       ensureIndex();

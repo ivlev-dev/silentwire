@@ -33,7 +33,7 @@ Factory может быть функцией или классом:
 container.bind(Logger, Logger);
 ```
 
-Для класса runtime сначала ищет `Symbol.for("async-di:create")`, который добавляет plugin. Если его нет, создаётся `new Logger()`.
+Для класса runtime сначала ищет `Symbol.for("silentwire:create")`, который добавляет plugin. Если его нет, создаётся `new Logger()`.
 
 ## Области видимости
 

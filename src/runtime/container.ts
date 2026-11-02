@@ -94,7 +94,7 @@ export class Container {
 
   resolve<T = unknown>(token?: unknown): Promise<T> {
     if (token === undefined) {
-      throw new Error("Async DI: resolve<T>() must be transformed by async-di before runtime");
+      throw new Error("Async DI: resolve<T>() must be transformed by silentwire before runtime");
     }
 
     const foundBinding = this.findBindingWithOwner(token);

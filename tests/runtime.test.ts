@@ -7,7 +7,7 @@ describe("runtime container", () => {
 
     class B {
       constructor(public readonly a: A) {}
-      static async [Symbol.for("async-di:create")](container: any) {
+      static async [Symbol.for("silentwire:create")](container: any) {
         return new B(await container.resolve(A));
       }
     }

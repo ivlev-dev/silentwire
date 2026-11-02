@@ -1,4 +1,4 @@
-export const DI_CREATE = Symbol.for("async-di:create");
+export const DI_CREATE = Symbol.for("silentwire:create");
 export interface Token<T = unknown> {
   __asyncDiToken: string;
   readonly _type?: T;

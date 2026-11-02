@@ -5,7 +5,7 @@ class A {}
 
 class B {
   constructor(public readonly a: A) {}
-  static async [Symbol.for("async-di:create")](container: any) {
+  static async [Symbol.for("silentwire:create")](container: any) {
     return new B(await container.resolve(A));
   }
 }
@@ -22,13 +22,13 @@ test("runtime benchmark", async ({ bench }) => {
     class Leaf {}
     class Mid {
       constructor(public x: Leaf) {}
-      static async [Symbol.for("async-di:create")](c: any) {
+      static async [Symbol.for("silentwire:create")](c: any) {
         return new Mid(await c.resolve(Leaf));
       }
     }
     class Root {
       constructor(public x: Mid) {}
-      static async [Symbol.for("async-di:create")](c: any) {
+      static async [Symbol.for("silentwire:create")](c: any) {
         return new Root(await c.resolve(Mid));
       }
     }

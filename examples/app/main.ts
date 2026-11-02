@@ -6,7 +6,7 @@ import type { B } from "./../autowire/b.js";
 async function run() {
   const out = document.getElementById("out");
   try {
-    // Контейнер разрешает B. Во время сборки async-di подставит реализацию A.
+    // Контейнер разрешает B. Во время сборки silentwire подставит реализацию A.
     const b = await container.resolve<B>();
     out!.textContent = await (b as any).use();
   } catch (error) {

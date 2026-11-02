@@ -12,7 +12,7 @@ export class B {
 `;
     const result = transformTypeScript(code, "/x/b.ts");
     expect(result?.changed).toBe(true);
-    expect(result?.code).toContain('static async [Symbol.for("async-di:create")]');
+    expect(result?.code).toContain('static async [Symbol.for("silentwire:create")]');
     expect(result?.code).toContain("await container.resolve(A)");
   });
 

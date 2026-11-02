@@ -163,7 +163,7 @@ function buildFactoryMethod(params: ConstructorParamInfo[]) {
 
   return [
     "",
-    "  static async [Symbol.for(\"async-di:create\")](container: any): Promise<any> {",
+    "  static async [Symbol.for(\"silentwire:create\")](container: any): Promise<any> {",
     `    return new this(${args});`,
     "  }",
     "",

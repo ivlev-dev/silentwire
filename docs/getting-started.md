@@ -5,7 +5,7 @@
 ```bash
 npm create vite@latest my-app -- --template vanilla-ts
 cd my-app
-npm install async-di
+npm install silentwire
 ```
 
 ## 2. Подключите plugin
@@ -84,7 +84,7 @@ main();
 ## Что происходит на этапе сборки
 
 1. `scanImplementations(root)` строит индекс `Store -> MemoryStore`.
-2. Transform находит `Service`, создаёт `static async [Symbol.for("async-di:create")]`.
+2. Transform находит `Service`, создаёт `static async [Symbol.for("silentwire:create")]`.
 3. Transform заменяет `container.resolve<Service>()` на `container.resolve(MemoryStore)` или динамический import.
 4. Runtime вызывает фабрику `Service` и разрешает `MemoryStore`.
 

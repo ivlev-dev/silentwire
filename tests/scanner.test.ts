@@ -6,7 +6,7 @@ import { scanImplementations } from "../src/scanner.js";
 
 describe("scanner", () => {
   it("indexes classes implementing interfaces", () => {
-    const root = fs.mkdtempSync(path.join(os.tmpdir(), "async-di-scanner-"));
+    const root = fs.mkdtempSync(path.join(os.tmpdir(), "silentwire-scanner-"));
     fs.mkdirSync(path.join(root, "src"), { recursive: true });
     fs.writeFileSync(path.join(root, "src", "types.ts"), "export interface Store { get(key: string): string; }\n");
     fs.writeFileSync(
@@ -26,7 +26,7 @@ describe("scanner", () => {
   });
 
   it("is not invalidated incorrectly by repeated scans", () => {
-    const root = fs.mkdtempSync(path.join(os.tmpdir(), "async-di-cache-"));
+    const root = fs.mkdtempSync(path.join(os.tmpdir(), "silentwire-cache-"));
     fs.mkdirSync(path.join(root, "src"), { recursive: true });
     fs.writeFileSync(path.join(root, "src", "types.ts"), "export interface Store { get(key: string): string; }\n");
     fs.writeFileSync(
@@ -44,7 +44,7 @@ describe("scanner", () => {
   });
 
   it("ignores output directories and declaration files", () => {
-    const root = fs.mkdtempSync(path.join(os.tmpdir(), "async-di-output-"));
+    const root = fs.mkdtempSync(path.join(os.tmpdir(), "silentwire-output-"));
     const src = path.join(root, "src");
     const dist = path.join(root, "dist");
     fs.mkdirSync(src, { recursive: true });
@@ -74,7 +74,7 @@ describe("scanner", () => {
   });
 
   it("invalidates cache when implementations change", () => {
-    const root = fs.mkdtempSync(path.join(os.tmpdir(), "async-di-cache-change-"));
+    const root = fs.mkdtempSync(path.join(os.tmpdir(), "silentwire-cache-change-"));
     const src = path.join(root, "src");
     fs.mkdirSync(src, { recursive: true });
     fs.writeFileSync(path.join(src, "types.ts"), "export interface Store { get(key: string): string; }\n");
