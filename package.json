@@ -2,6 +2,16 @@
   "name": "silentwire",
   "version": "0.1.0",
   "license": "GPL-3.0-or-later",
+  "keywords": [
+    "vite",
+    "dependency-injection",
+    "di",
+    "compile-time",
+    "typescript",
+    "async",
+    "container",
+    "scopes"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:ivlev-dev/silentwire.git"
@@ -37,8 +47,8 @@
     }
   },
   "scripts": {
-    "build": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true});\" && tsc -p tsconfig.json",
-    "test": "vitest run",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build",
+    "build": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true});\" && tsc -p tsconfig.json",    "test": "vitest run",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "test:watch": "vitest",
     "bench": "vitest bench",
