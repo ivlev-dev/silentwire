@@ -24,6 +24,5 @@ jobs:
       - run: pnpm run typecheck
       - run: pnpm run build
       - run: pnpm test
+      # Trusted Publishing: npm подтверждает публикацию через OIDC, token не нужен.
       - run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
