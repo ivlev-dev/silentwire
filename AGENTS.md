@@ -53,6 +53,12 @@ npm run dev:example
 - Обновляйте README/docs при изменении поведения.
 - Проверяйте examples после изменений transform/plugin.
 
+## Git
+
+- Коммиты делайте по Conventional Commits на русском языке.
+- Формат: `<type>(<scope>): <описание на русском>`.
+- Типы: `feat`, `fix`, `refactor`, `test`, `docs`, `chore`, `perf`, `ci`.
+
 ## Тестирование
 
 Перед завершением задачи выполните:
