@@ -2,6 +2,14 @@
   "name": "silentwire",
   "version": "0.1.0",
   "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ivlev-dev/silentwire.git"
+  },
+  "homepage": "https://github.com/ivlev-dev/silentwire",
+  "bugs": {
+    "url": "https://github.com/ivlev-dev/silentwire/issues"
+  },
   "description": "Decorator-free compile-time dependency injection wired from TypeScript types for Vite",
   "type": "module",
   "engines": {
