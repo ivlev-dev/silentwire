@@ -1,0 +1,22 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "silentwire",
+  "description": "Compile-time dependency injection plugin for Vite with a small async runtime container.",
+  "folders": ["README.md", "docs", "examples"],
+  "excludeFolders": [
+    "node_modules",
+    "dist",
+    "build",
+    "coverage",
+    ".git"
+  ],
+  "excludeFiles": [
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "rules": [
+    "Use asyncDiPlugin() in vite.config.ts to enable constructor and resolve<T>() transforms.",
+    "Bind an implementation explicitly when an interface has multiple implementations.",
+    "Scanner only links interfaces to classes through implements; use bind() for complex re-export or type-only scenarios."
+  ]
+}
